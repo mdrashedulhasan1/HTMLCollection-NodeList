@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="article">
+            <h1 style="text-align: center;" id="text">First</h1>
+        </div>
+        <div class="article">
+            <h1 style="background-color:red" id="text">Second</h1>
+        </div>
+    </div>
+    <script>
+        //HTMLCollection
+        const blogs = document.getElementsByClassName('article');
+        console.log(blogs)
+        
+        //NodeList
+        const articles = document.querySelectorAll('.article');
+        console.log(articles);
+
+        //setAttribute & getAttribute
+        const headerText2 = document.getElementById('text');
+        headerText2.setAttribute('title', 'I am article header');
+        const headerStyle = headerText2.getAttribute('style');
+        console.log(headerStyle);
+    </script>
+</body>
+</html>
